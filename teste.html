@@ -1,0 +1,25 @@
+<!doctype html>
+// Criando a aplicação
+<html ng-app="app">
+<head>
+    // fazendo a chamada do js
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+</head>
+<body>
+// Chamada do controller
+<div ng-controller="CtrlApp">
+    {{name}}
+</div>
+// Criando o aplicativo
+<script>
+    // Criando controller
+    var myApp = angular.module('app', []);
+
+    var CtrlApp = function($scope){
+        $scope.name = 'jayson';
+    }
+    myApp.controller('CtrlApp', CtrlApp);
+</script>
+</body>
+
+</html>

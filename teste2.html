@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div ng-controller="CtrlApp">
+        <input type="text" ng-model="nome"  ng-change="logar()">
+        <input type="checkbox" ng-model="checado">show
+        <div ng-show="checado">
+            Olá {{ nome }}
+        </div>
+    </div>
+</body>
+<script>
+
+    var myApp = angular.module('app', []);
+
+    var CtrlApp = function($scope){
+        $scope.nome = 'jayson';
+
+        $scope.logar = function(){
+            alert($scope.nome);
+        }
+    }
+    myApp.controller('CtrlApp', CtrlApp);
+</script>
+</html>

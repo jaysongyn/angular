@@ -1,0 +1,20 @@
+<div ng-init="load()">
+    <h3>Listagem</h3>
+    <table class="table">
+        <a href="#/novo">Novo</a>
+        <thead>
+            <th>ID</th>
+            <th>Pessoa</th>
+            <th>email</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="registro in registros">
+                <td>{{ registro.id }}</td>
+                <td>{{ registro.nome }}</td>
+                <td>{{ registro.email }}</td>
+                <td><a href="#/editar/{{registro.id}}" class="btn btn-primary btn-xs">Editar</td>
+            </tr>
+        </tbody>
+    </table>
+<div>

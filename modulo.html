@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div ng-controller="CtrlApp">
+        meu nome e {{ nome }}
+    </div>
+    <script>
+        angular.modulo('App',[]).controller('CtrlApp', function($scope){
+            $scope.nome = 'jayson';
+        });
+        angular.module('app',[]).controller('CtrlApp', function($scope){
+            $scope.nome = 'jayson';
+        });
+
+    </script>
+</body>
+</html>
